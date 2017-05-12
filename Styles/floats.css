@@ -1,0 +1,44 @@
+#headerDiv{
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#leftNav{
+    /*   width: 20%;*/
+      height: 300px;
+      background-color: grey;
+     /* float: left; */
+}
+
+#mainContent{
+    /*    width: 50%;*/
+    height: 300px;
+
+    background-color: red;
+/* float: left;*/
+}
+
+#rightSide{
+    /* width: 20%;*/
+    height: 300px;
+    background-color: black;
+    color: white;
+/* float: right;*/
+}
+
+#contentArea{
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#footerDiv{
+
+padding: 5px;
+background-color: blue;
+color: white;
+}

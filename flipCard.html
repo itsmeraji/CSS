@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Flip card</title>
+        <link rel="stylesheet" href="Styles/flipCard.css">
+    </head>
+    <body>
+    <div></div>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $("div").on("click", function(){
+           var $this = $(this);
+           // This if loop is added to start animation 1st. If this is not available & the class is directly added to html, it will rotate on load
+            if($this.attr('class') ===  undefined){
+               $this.addClass('turnBack');
+           };
+           $this.toggleClass("turnFront").toggleClass("turnBack");
+        });
+    </script>
+    </body>
+</html>

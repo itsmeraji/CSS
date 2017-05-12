@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>CSS</title>
+        <link rel="stylesheet" href="Styles/all.css"/>
+        <link rel="stylesheet" href="Styles/learnCSS.css"/>
+        <link rel="shortcut icon" href="Images/favicon.ico"/>
+    </head>
+    <body>
+        <h1>CSS</h1>
+
+        <div id="homepageTopNav" class="topNav">
+            <ul>
+                <li><a href="selectors.html">Selectors</a></li>
+                <li><a href="#">xxx</a></li>
+                <li><a href="#">yyy</a></li>
+                <li><a href="positioning.html">Positioning</a></li>
+            </ul>
+        </div>
+        <div id="homepageLeftNav" class="leftNav">
+            <ul>
+                <li><a href="#">xx</a></li>
+                <li><a href="#">xx</a></li>
+                <li><a href="#">xx</a></li>
+            </ul>
+        </div>
+
+        <div id="selectorContentArea" class="contentArea selectorPageContent">
+            <h2>CSS Selectors</h2>
+            <div class="selectorType">
+                <h3>* Selector</h3>
+                <p>All elements in this page are styled italic with * selector.</p>
+            </div>
+            <div class="selectorType">
+                <h3>ID selector</h3>
+                <p id="blueColor">This is with blueColor text ID selector.</p>
+            </div>
+            <div class="selectorType">
+                <h3>Class Selectors</h3>
+                <p class="greenBackground">This is with .greenBackground class selector.</p>
+            </div>
+            <div class="selectorType">
+                <h3>Element Selectors</h3>
+                <pre>This is a pre element selector with color red.</pre>
+            </div>
+            <div class="selectorType combineSelector">
+                <h3>Combining 2 selectors</h3>
+                <p>These are p and strong elements combined with padding left 50px.</p>
+                <strong>These are p and strong elements combined with padding left 50px.</strong>
+            </div>
+            <div class="selectorType descendentSelector">
+                <h3>Descendent Selector</h3>
+                <p>Child p - All p elements inside this div will have underlined text.</p>
+                <p>Child p - All p elements inside this div will have underlined text.</p>
+                <span>Child span - This span element wont have the underline.</span>
+                <div class="insideDiv">
+                    <p>Grandchild p within another div.</p>
+                    <span>Grandchild span within another div.</span>
+                    <p>Grandchild p within another div.</p>
+                </div>
+            </div>
+            <div class="selectorType childSelector">
+                <h3>Only 'child' Selector</h3>
+                <span>Child span - All children (Not grandchildren) will have a left border. </span>
+                <p>Child p - Only child p elements inside this div will have underlined text.</p>
+                <p>Child p - Only child p elements inside this div will have underlined text.</p>
+                <span>Child span - This span element wont have the underline.</span>
+                <div class="insideDiv">
+                    <p>Grandchild p within another div.</p>
+                    <span>Grandchild span within another div.</span>
+                    <p>Grandchild p within another div.</p>
+                </div>
+            </div>
+            <div class="selectorType">
+                <h3>Immediate Sibling Selector</h3>
+                <p class="immSiblingSelector">Immediate span sibling selector - Immediate sibling span element after this p is styled with border.</p>
+                <span> Sibling span1 </span>
+                <p> Sibling p2 </p>
+                <span>Sibling span2</span>
+                <p class="immSiblingSelector">Immediate span sibling selector - Immediate sibling span element after this p is styled with border.</p>
+               <p>Sibling p - no style</p>
+                <span> Sibling span1 </span>
+                <p> Sibling p2 </p>
+                <span>Sibling span2</span>
+                <p class="immAnySiblingSelector">Immediate any sibling selector - Immediate sibling (any) element after this p is styled with border.</p>
+                <p>Sibling p - has style</p>
+                <span> Sibling span1 </span>
+                <p> Sibling p2 </p>
+                <span>Sibling span2</span>
+            </div>
+            <div class="selectorType">
+                <h3>General Sibling Selector</h3>
+                <p class="genSiblingSelector">General span sibling selector - All sibling span element after this p is styled with border.</p>
+                <span> Sibling span1 </span>
+                <p> Sibling p2 </p>
+                <span>Sibling span2</span>
+                <p class="genAnySiblingSelector">General any sibling selector - All sibling (any) element after this p is styled with border.</p>
+                <p>Sibling p - has style</p>
+                <span> Sibling span1 </span>
+                <p> Sibling p2 </p>
+                <span>Sibling span2</span>
+            </div>
+            <div class="selectorType">
+                <h3>Attribute Selector</h3>
+                <p>Elements with 'title' attribute (appears on hover) r colored red, title='checkThis' r green, with 'help' in a word r grey, with 'help' are blue, beginning with hello are brown, starting with 'hello' are purple, ending with hello are yellowgreen</p>
+                <p>Element without title attribute</p>
+                <p title="xxx">title attribute = 'xxx' [] </p>
+                <p title="checkThis">title attribute = 'checkThis' []= </p>
+                <p title="helpText">title attribute = 'helpText' []*= </p>
+                <p title="this is help Text">title attribute = 'this is help Text' []~= </p>
+                <p title="helloWorld">title attribute = 'helloWorld' []^= </p>
+                <p title="hello-world">title attribute = 'hello-World' []|= </p>
+                <p title="sayshello">title attribute = 'sayshello' []$= </p>
+                <p title="yyy">title attribute = 'yyy'</p>
+            </div>
+            <div class="selectorType anchorSelector">
+                <h3>Anchor Selector</h3>
+                <p>Anchor styles - link red, mouse over - yellow background, visited blue</p>
+                <a href=#">Link 1</a>
+                <a href=#">Link 2</a>
+            </div>
+            <div class="selectorType inputSelector">
+                <h3>Input Selector</h3>
+                Name: (Read / write input, required): <input type="text" required><br><br>
+                City: (Read only input): <input type="text" readonly="true" value="Fremont"><br><br>
+                Email: (Accepts only emails): <input type="email"><br><br>
+                Interests: (Disabled): <input type="text" disabled><br><br>
+                Number: (Only 3 to 10): <input type="number" min="3" max="10"><br><br>
+                Gender: <input type="radio" name="gender" class="radiobtn"><span>Male</span><input type="radio" name="gender" class="radiobtn"><span>Female</span><br>
+                <table class="styleDescription">
+                    <tr>
+                       <th>Selector</th>
+                        <th>Style</th>
+                    </tr>
+                    <tr>
+                        <td>Read write</td>
+                        <td>Green border</td>
+                    </tr>
+                    <tr>
+                        <td>Read only</td>
+                        <td>Red border</td>
+                    </tr>
+                    <tr>
+                        <td>Valid</td>
+                        <td>Green font</td>
+                    </tr>
+                    <tr>
+                        <td>Invalid</td>
+                        <td>Red font</td>
+                    </tr>
+                    <tr>
+                        <td>Required</td>
+                        <td>Double border</td>
+                    </tr>
+                    <tr>
+                        <td>Optional</td>
+                        <td>Dotted border</td>
+                    </tr>
+                    <tr>
+                        <td>Disabled</td>
+                        <td>Grey background</td>
+                    </tr>
+                    <tr>
+                        <td>Enabled</td>
+                        <td>Yellow background</td>
+                    </tr>
+                    <tr>
+                        <td>In range</td>
+                        <td>Green font</td>
+                    </tr>
+                    <tr>
+                        <td>Out of range</td>
+                        <td>red font</td>
+                    </tr>
+                    <tr>
+                        <td>Checked</td>
+                        <td>blue background</td>
+                    </tr>
+                    <tr>
+                        <td>Focus</td>
+                        <td>Scaled up</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="selectorType pseudoElementSelector">
+                <span>first span type with grey background & first span child with green color</span>
+                <h3>pseudo element Selector [only of type h3]</h3>
+                <p>First line - yellow background, first letter - red bold font, indented.</p>
+                <span>span 1</span>
+                <span> span 2 - 5th child colored font</span>
+                <span> span 3 - 4th span colored font</span>
+                <span> span 4 - 5th child colored font</span>
+                <span> span 5 - 5th child colored font</span>
+                <span> span 6 - 5th child colored font</span>
+                <span> span 7 - 5th child colored font</span>
+                <span> span 8 - last but 3 colored font</span>
+                <span> span 9 - last span type colored font</span>
+                <p>Last p - last child color</p>
+                <div><span>Div with only one span child</span></div>
+                <a href="#nextSpan">Goto next span</a>
+                <span id="nextSpan">Span</span>
+            </div>
+        </div>
+    </body>
+</html>
+</html>

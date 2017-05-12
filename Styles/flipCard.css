@@ -1,0 +1,33 @@
+@keyframes turn-back{
+    0%{
+        transform: rotateY(0deg);
+        background-image: url(../Images/card_front.jpg);
+    }
+    100%{
+        transform: rotateY(360deg);
+        background-image: url(../Images/card_back.jpeg);
+    }
+}
+@keyframes turn-front{
+    0%{
+        transform: rotateY(0deg);
+        background-image: url(../Images/card_back.jpeg);
+    }
+    100%{
+        transform: rotateY(360deg);
+        background-image: url(../Images/card_front.jpg);
+    }
+}
+div{
+    width: 500px;
+    height: 300px;
+    background-image: url(../Images/card_front.jpg);
+    background-size: 500px 300px;
+}
+div.turnFront{
+    animation: turn-back 5s forwards;
+}
+div.turnBack{
+    animation: turn-front 5s forwards;
+}
+
